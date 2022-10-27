@@ -1,6 +1,6 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
+import java.util.function.BiConsumer;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,8 +11,7 @@ public class Main {
         listPeople.add(new Person("Мадин", "Фролов", 28));
         System.out.println(listPeople);
 
-        Collections.sort(listPeople, new PersonComparator());
-        System.out.println(listPeople);
+        BiConsumer<Person, Person> personPersonBiConsumer = (Person p1, Person p2) ->
+                System.out.println(listPeople);
     }
-
 }
